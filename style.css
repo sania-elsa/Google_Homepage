@@ -59,11 +59,17 @@ a:hover {
     fill: #5f6368;
 }
 
+.profile-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 .profile-icon {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: #4285f4;
+    background-color: #005a9e;
     color: white;
     display: flex;
     justify-content: center;
@@ -73,6 +79,239 @@ a:hover {
     cursor: pointer;
     margin-left: 5px;
 }
+
+.profile-icon:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.profile-popup {
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 0;
+    width: 350px;
+    background: #e9eef6;
+    border-radius: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 100;
+    overflow: hidden;
+}
+
+.profile-popup.active {
+    display: block;
+}
+
+.profile-header {
+    background: #e9eef6;
+    padding: 20px 20px 10px;
+    text-align: center;
+    border-bottom: 1px solid #dce2eb;
+}
+
+.profile-email {
+    font-size: 13px;
+    color: #444746;
+    margin-bottom: 15px;
+}
+
+.profile-large-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #005a9e;
+    color: white;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+}
+
+.profile-greeting {
+    font-size: 20px;
+    color: #1f1f1f;
+    margin-bottom: 15px;
+}
+
+.manage-account-btn {
+    background: white;
+    border: 1px solid #747775;
+    border-radius: 100px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #0b57d0;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.2s;
+    margin-bottom: 10px;
+}
+
+.manage-account-btn:hover {
+    background-color: #f1f4f8;
+}
+
+.profile-actions, .profile-footer {
+    background: #f8fafd;
+    padding: 8px;
+    border-radius: 24px;
+    margin: 4px;
+}
+
+.profile-action-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #1f1f1f;
+    border-radius: 12px;
+    transition: background-color 0.2s;
+}
+
+.profile-action-item:hover {
+    background-color: #eceff1;
+}
+
+.profile-action-item span {
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+/* Apps Menu Components */
+.apps-container {
+    position: relative;
+}
+
+.apps-popup {
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 0;
+    width: 320px;
+    background: #f8fafd;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 12px;
+    z-index: 100;
+    max-height: 460px; /* Limits to ~15 icons before scrolling */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Apps Popup Custom Scrollbar */
+.apps-popup::-webkit-scrollbar {
+    width: 8px;
+}
+
+.apps-popup::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 12px 0;
+    border-radius: 4px;
+}
+
+.apps-popup::-webkit-scrollbar-thumb {
+    background: #dadce0;
+    border-radius: 4px;
+}
+
+.apps-popup::-webkit-scrollbar-thumb:hover {
+    background: #bdc1c6;
+}
+
+.apps-popup.active {
+    display: block;
+}
+
+.apps-favorites-container {
+    background: white;
+    border-radius: 16px;
+    padding: 12px 6px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.apps-favorites-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px 8px;
+}
+
+.favorites-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1f1f1f;
+}
+
+.favorites-edit-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #e8f0fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.favorites-edit-icon:hover {
+    background-color: #d2e3fc;
+}
+
+.favorites-edit-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: #1967d2;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+.apps-favorites-grid {
+    padding: 0;
+}
+
+.app-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 12px 0 8px;
+    transition: background-color 0.2s;
+}
+
+.app-item:hover {
+    background-color: #e9eef6;
+}
+
+.app-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.app-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.app-item span {
+    font-size: 13px;
+    color: #3c4043;
+}
+
 
 /* Main Content */
 .content {
@@ -140,20 +379,25 @@ a:hover {
 }
 
 .plus-popup {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
-    top: 35px;
+    top: 45px;
     left: 0;
-    background: white;
+    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     padding: 8px 0;
-    width: 130px;
+    width: 140px;
     z-index: 10;
+    transform: translateY(-5px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
 
 .plus-icon:hover .plus-popup {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .popup-item {
@@ -201,29 +445,57 @@ a:hover {
 }
 
 .ai-button {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 4px;
-    background: linear-gradient(135deg, #e8f0fe, #fce8e6);
-    border: 1px solid #d2e3fc;
-    padding: 5px 10px;
-    border-radius: 16px;
-    color: #1967d2;
+    gap: 6px;
+    background-color: #fff;
+    border: 2px solid transparent;
+    padding: 6px 14px;
+    border-radius: 20px;
+    color: #202124;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 14px;
     cursor: pointer;
     margin-left: 4px;
-    transition: box-shadow 0.2s;
+    transition: all 0.2s ease;
+    z-index: 1;
 }
 
-.ai-button:hover {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+.ai-button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #fff;
+    border: 1px solid #dfe1e5;
+    border-radius: 20px;
+    z-index: -1;
+    transition: all 0.2s ease;
+}
+
+.ai-button:hover::after {
+    border-color: transparent;
+}
+
+.ai-button::before {
+    content: '';
+    position: absolute;
+    inset: -1px; /* The hover gradient expands past the element */
+    border-radius: 20px;
+    background: linear-gradient(115deg, #ea4335 0%, #fbbc05 25%, #34a853 50%, #4285f4 90%);
+    z-index: -2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ai-button:hover::before {
+    opacity: 1;
 }
 
 .ai-button svg {
-    width: 16px;
-    height: 16px;
-    stroke: #1967d2;
+    width: 18px;
+    height: 18px;
+    stroke: #202124;
 }
 
 /* History Dropdown */
@@ -372,6 +644,255 @@ footer {
 .footer-bottom a {
     color: #70757a;
 }
+
+/* Footer Settings Menu */
+.settings-container {
+    position: relative;
+    display: inline-block;
+}
+
+.settings-popup {
+    display: none;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    width: 250px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    padding: 8px 0;
+    z-index: 100;
+    text-align: left;
+}
+
+.settings-popup.active {
+    display: block;
+}
+
+.settings-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #202124;
+}
+
+.settings-item:hover {
+    background: #f1f3f4;
+}
+
+.settings-divider {
+    border-top: 1px solid #e8eaed;
+    margin: 4px 0;
+}
+
+/* Dark Mode Styles */
+body.dark {
+    background-color: #202124;
+    color: #e8eaed;
+}
+
+body.dark a {
+    color: #9aa0a6;
+}
+
+body.dark footer {
+    background-color: #171717;
+    color: #9aa0a6;
+}
+
+body.dark .footer-top {
+    border-bottom-color: #3c4043;
+}
+
+body.dark .footer-bottom a {
+    color: #9aa0a6;
+}
+
+body.dark .search-container {
+    background-color: #202124;
+    border-color: #5f6368;
+}
+
+body.dark .search-container:hover,
+body.dark .search-container.active {
+    background-color: #303134;
+    border-color: #303134;
+    box-shadow: 0 1px 6px rgba(23, 23, 23, 0.28);
+}
+
+body.dark #search-input {
+    color: #e8eaed;
+    background-color: transparent;
+}
+
+body.dark .icon-btn svg,
+body.dark .search-icons-right svg:first-child,
+body.dark .history-item svg {
+    fill: #9aa0a6;
+}
+
+body.dark .plus-icon svg {
+    fill: #9aa0a6;
+}
+
+body.dark .icon-btn:hover {
+    background-color: #3c4043;
+}
+
+body.dark .ai-button {
+    color: #e8eaed;
+    background-color: transparent;
+}
+
+body.dark .ai-button::after {
+    background-color: #303134;
+    border-color: #5f6368;
+}
+
+body.dark .ai-button:hover::after {
+    border-color: transparent;
+}
+
+body.dark .ai-button svg {
+    stroke: #e8eaed;
+}
+
+body.dark .action-btn {
+    background-color: #303134;
+    border-color: #303134;
+    color: #e8eaed;
+}
+
+body.dark .action-btn:hover {
+    border-color: #5f6368;
+    background-color: #303134;
+    color: #e8eaed;
+}
+
+body.dark .search-history-dropdown {
+    background-color: #303134;
+}
+
+body.dark .dropdown-divider {
+    background-color: #5f6368;
+}
+
+body.dark .history-item:hover {
+    background-color: #3c4043;
+}
+
+body.dark .history-item-text {
+    color: #e8eaed;
+}
+
+body.dark .settings-popup {
+    background-color: #303134;
+    border: 1px solid #3c4043;
+}
+
+body.dark .settings-item {
+    color: #e8eaed;
+}
+
+body.dark .settings-item:hover {
+    background-color: #3c4043;
+}
+
+body.dark .settings-divider {
+    border-top-color: #5f6368;
+}
+
+body.dark .apps-popup {
+    background: #303134;
+}
+
+body.dark .apps-popup::-webkit-scrollbar-thumb {
+    background: #5f6368;
+}
+
+body.dark .apps-popup::-webkit-scrollbar-thumb:hover {
+    background: #70757a;
+}
+
+body.dark .apps-favorites-container {
+    background: #202124;
+    box-shadow: none;
+}
+
+body.dark .favorites-title {
+    color: #e8eaed;
+}
+
+body.dark .favorites-edit-icon {
+    background-color: #3c4043;
+}
+
+body.dark .favorites-edit-icon:hover {
+    background-color: #4a4d51;
+}
+
+body.dark .favorites-edit-icon svg {
+    fill: #8ab4f8;
+}
+
+body.dark .app-item span {
+    color: #e8eaed;
+}
+
+body.dark .app-item:hover {
+    background-color: #3c4043;
+}
+
+body.dark .plus-popup {
+    background: #303134;
+}
+
+body.dark .popup-item {
+    color: #e8eaed;
+}
+
+body.dark .popup-item:hover {
+    background: #3c4043;
+}
+
+body.dark .profile-popup {
+    background: #303134;
+}
+
+body.dark .profile-header {
+    background: #303134;
+    border-bottom: 1px solid #5f6368;
+}
+
+body.dark .profile-email {
+    color: #9aa0a6;
+}
+
+body.dark .profile-greeting {
+    color: #e8eaed;
+}
+
+body.dark .manage-account-btn {
+    border: 1px solid #9aa0a6;
+    color: #8ab4f8;
+}
+
+body.dark .manage-account-btn:hover {
+    background-color: #3c4043;
+}
+
+body.dark .profile-actions, body.dark .profile-footer {
+    background: #202124;
+}
+
+body.dark .profile-action-item {
+    color: #e8eaed;
+}
+
+body.dark .profile-action-item:hover {
+    background-color: #3c4043;
+}
+
 
 /* Responsiveness */
 @media (max-width: 650px) {

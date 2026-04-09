@@ -17,21 +17,161 @@
     <!-- Top Navigation Area -->
     <header class="top-nav">
         <div class="nav-left">
-            <a href="#">About</a>
-            <a href="#">Store</a>
+            <a href="https://about.google/?fg=1&utm_source=google-IN&utm_medium=referral&utm_campaign=hp-header">About</a>
+            <a href="https://store.google.com/in/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-IN&pli=1">Store</a>
         </div>
         <div class="nav-right">
             <a href="#">Gmail</a>
             <a href="#">Images</a>
-            <div class="icon-btn" title="Google apps">
-                <!-- App Grid Icon -->
-                <svg focusable="false" viewBox="0 0 24 24">
-                    <path
-                        d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
-                    </path>
-                </svg>
+            <div class="apps-container">
+                <div class="icon-btn" id="apps-btn" title="Google apps">
+                    <!-- App Grid Icon -->
+                    <svg focusable="false" viewBox="0 0 24 24">
+                        <path
+                            d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                        </path>
+                    </svg>
+                </div>
+                <!-- Apps Menu Popup -->
+                <div class="apps-popup" id="apps-popup">
+                    <div class="apps-favorites-container">
+                        <div class="apps-favorites-header">
+                            <span class="favorites-title">Your favorites</span>
+                            <div class="favorites-edit-icon" title="Edit favorites">
+                                <svg focusable="false" viewBox="0 0 24 24">
+                                    <path
+                                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="apps-grid apps-favorites-grid">
+                            <div class="app-item">
+                                <div class="app-icon">
+                                    <div class="profile-icon"
+                                        style="margin:0; width: 44px; height: 44px; font-size: 20px; background-color: #005a9e;">
+                                        S</div>
+                                </div><span>Account</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/1/12/Google_Drive_icon_%282020%29.svg"
+                                        alt="Drive"></div><span>Drive</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                                        alt="Gmail"></div><span>Gmail</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+                                        alt="YouTube"></div><span>YouTube</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon"><img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv0sMmr_BvvqkrIccZJdreygNgb0n5gtDRzg&s"
+                                        alt="Gemini"></div><span>Gemini</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Google_Maps_icon_%282020%29.svg"
+                                        alt="Maps"></div><span>Maps</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                        alt="Search"></div><span>Search</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg"
+                                        alt="Calendar"></div><span>Calendar</span>
+                            </div>
+                            <div class="app-item">
+                                <div class="app-icon"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_News_icon.svg"
+                                        alt="News"></div><span>News</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="apps-grid" style="padding: 0 12px;">
+                        <div class="app-item">
+                            <div class="app-icon"><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Google_Photos_%282025%29.svg/1280px-Google_Photos_%282025%29.svg.png"
+                                    alt="Photos"></div><span>Photos</span>
+                        </div>
+                        <div class="app-item">
+                            <div class="app-icon"><img
+                                    src="https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v1/web-96dp/logo_meet_2020q4_color_2x_web_96dp.png"
+                                    alt="Meet"></div><span>Meet</span>
+                        </div>
+                        <div class="app-item">
+                            <div class="app-icon"><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Google_Translate_logo.svg"
+                                    alt="Translate"></div><span>Translate</span>
+                        </div>
+                        <div class="app-item">
+                            <div class="app-icon"><img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2ZkeBwflu_uw9zmuH6yg94AmGNhRznRq2DQ&s"
+                                    alt="Vids"></div><span>Vids</span>
+                        </div>
+                        <div class="app-item">
+                            <div class="app-icon"><img
+                                    src="https://img.utdstc.com/icon/5c6/b29/5c6b29f8bc2051f62849b1e218dfe5bc190a197aedbdf7649d390dd0754df28f:200"
+                                    alt="Sheet"></div><span>Sheet</span>
+                        </div>
+                        <div class="app-item">
+                            <div class="app-icon"><img src="https://www.computerhope.com/jargon/g/google-docs.png"
+                                    alt="Docs"></div><span>Docs</span>
+                        </div>
+                        <div class="app-item">
+                            <div class="app-icon"><img
+                                    src="https://play-lh.googleusercontent.com/DG-zbXPr8LItYD8F2nD4aR_SK_jpkipLBK77YWY-F0cdJt67VFgCHZtRtjsakzTw3EM=w240-h480-rw"
+                                    alt="Slides"></div><span>Slides</span>
+                        </div>
+                        <div class="app-item">
+                            <div class="app-icon"><img
+                                    src="https://play-lh.googleusercontent.com/B5AENJqFOd91t5cWZLTQbVUm7iDWzYVM1n0Pe2RI_46dhlWMtVAUBioUvy4YMXWdwA"
+                                    alt="Google One"></div><span>Google One</span>
+                        </div>
+                        <div class="app-item">
+                            <div class="app-icon"><img
+                                    src="https://www.celigo.com/wp-content/uploads/2022/11/brandmark-logo-google-shopping.webp"
+                                    alt="Shopping"></div><span>Shopping</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="profile-icon">A</div>
+            <div class="profile-container">
+                <div class="profile-icon" id="profile-btn">S</div>
+                <!-- Account Profile Popup -->
+                <div class="profile-popup" id="profile-popup">
+                    <div class="profile-header">
+                        <div class="profile-email">user@gmail.com</div>
+                        <div class="profile-large-icon">S</div>
+                        <div class="profile-greeting">Hi, User!</div>
+                        <button class="manage-account-btn">Manage your Google Account</button>
+                    </div>
+                    <div class="profile-actions">
+                        <div class="profile-action-item">
+                            <span>➕</span> Add account
+                        </div>
+                        <div class="profile-action-item">
+                            <span>➡</span> Sign out
+                        </div>
+                    </div>
+                    <div class="profile-footer">
+                        <div class="profile-action-item">
+                            <span>🕒</span> Search history
+                        </div>
+                        <div class="profile-action-item">
+                            <span>🗑️</span> Delete last 30 minutes
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -144,9 +284,21 @@
                 <a href="#">How Search works</a>
             </div>
             <div class="footer-right">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Settings</a>
+                <a href="https://policies.google.com/privacy?hl=en-IN&fg=1">Privacy</a>
+                <a href="https://policies.google.com/terms?hl=en-IN&fg=1">Terms</a>
+                <div class="settings-container">
+                    <a href="#" id="settings-btn">Settings</a>
+                    <div class="settings-popup" id="settings-popup">
+                        <div class="settings-item">Search settings</div>
+                        <div class="settings-item">Advanced search</div>
+                        <div class="settings-item">Your data in Search</div>
+                        <div class="settings-item">Search history</div>
+                        <div class="settings-item">Search help</div>
+                        <div class="settings-item">Send feedback</div>
+                        <div class="settings-divider"></div>
+                        <div class="settings-item" id="dark-theme-toggle">Dark theme: Off</div>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

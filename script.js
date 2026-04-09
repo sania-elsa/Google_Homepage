@@ -8,6 +8,68 @@ document.addEventListener('DOMContentLoaded', () => {
     const fileUploadInput = document.getElementById('file-upload');
     const cameraBtn = document.getElementById('camera-btn');
     const micBtn = document.getElementById('mic-btn');
+    const appsBtn = document.getElementById('apps-btn');
+    const appsPopup = document.getElementById('apps-popup');
+    const settingsBtn = document.getElementById('settings-btn');
+    const settingsPopup = document.getElementById('settings-popup');
+    const darkThemeToggle = document.getElementById('dark-theme-toggle');
+    const profileBtn = document.getElementById('profile-btn');
+    const profilePopup = document.getElementById('profile-popup');
+
+    // Apps Menu Functionality
+    appsBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        appsPopup.classList.toggle('active');
+        settingsPopup.classList.remove('active');
+        profilePopup.classList.remove('active');
+    });
+
+    // Settings Menu Functionality
+    settingsBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        settingsPopup.classList.toggle('active');
+        appsPopup.classList.remove('active');
+        profilePopup.classList.remove('active');
+    });
+
+    // Profile Menu Functionality
+    profileBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        profilePopup.classList.toggle('active');
+        appsPopup.classList.remove('active');
+        settingsPopup.classList.remove('active');
+    });
+
+    // Dark Mode Toggle Logic
+    darkThemeToggle.addEventListener('click', (e) => {
+        e.stopPropagation(); // keep menu open after click if desired, or let it close
+        document.body.classList.toggle('dark');
+        const isDark = document.body.classList.contains('dark');
+        darkThemeToggle.textContent = `Dark theme: ${isDark ? 'On' : 'Off'}`;
+        
+        // Optional: Save to local storage for persistence
+        localStorage.setItem('googleDarkMode', isDark ? 'true' : 'false');
+    });
+
+    // Restore Dark Mode if saved
+    if (localStorage.getItem('googleDarkMode') === 'true') {
+        document.body.classList.add('dark');
+        darkThemeToggle.textContent = 'Dark theme: On';
+    }
+
+    // Close popups when clicking outside
+    document.addEventListener('click', (e) => {
+        if (appsPopup.classList.contains('active') && !appsPopup.contains(e.target)) {
+            appsPopup.classList.remove('active');
+        }
+        if (settingsPopup.classList.contains('active') && !settingsPopup.contains(e.target)) {
+            settingsPopup.classList.remove('active');
+        }
+        if (profilePopup.classList.contains('active') && !profilePopup.contains(e.target)) {
+            profilePopup.classList.remove('active');
+        }
+    });
 
     // 1. LocalStorage based History Logic
     let history = JSON.parse(localStorage.getItem('googleSearchHistory')) || [];
