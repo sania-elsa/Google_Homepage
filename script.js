@@ -34,12 +34,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Profile Menu Functionality
+    const profileCloseBtn = document.getElementById('profile-close-btn');
+
     profileBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         profilePopup.classList.toggle('active');
         appsPopup.classList.remove('active');
         settingsPopup.classList.remove('active');
     });
+
+    if (profileCloseBtn) {
+        profileCloseBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            profilePopup.classList.remove('active');
+        });
+    }
 
     // Dark Mode Toggle Logic
     darkThemeToggle.addEventListener('click', (e) => {
