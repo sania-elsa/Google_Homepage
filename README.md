@@ -26,4 +26,6 @@ This project was created as part of an assignment to practice front-end developm
 ## Commit History
 1. Initial commit - Basic layout with HTML, CSS, and JS  
 2. UI update - Improved layout and styling  
-3. Feature update - Added search history, voice search, image upload, and UI enhancements  
+3. Feature update - Added search history, voice search, image upload, and UI enhancements
+4. Implement Google homepage features including apps grid, favorites section, account popup, settings menu, and dark mode toggle
+5. Enhance profile button and upgrade account popup design
